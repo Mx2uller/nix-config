@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./gnome.nix
       ./hardware-configuration.nix
+      ./services/hd-idle.nix
     ];
 
   # Bootloader.
