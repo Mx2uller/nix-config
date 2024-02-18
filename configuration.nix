@@ -7,8 +7,8 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+      ./gnome.nix
       ./hardware-configuration.nix
-      ./de-wm/hyperland.nix
     ];
 
   # Bootloader.
@@ -61,7 +61,7 @@
   };
 
   # Enable automatic login for the user.
-  services.getty.autologinUser = "mx2uller";
+  # services.getty.autologinUser = "mx2uller";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
