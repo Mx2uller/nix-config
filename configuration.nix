@@ -45,7 +45,7 @@
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "us";
+    layout = "us, hr";
     xkbVariant = "";
   };
 
@@ -55,13 +55,14 @@
     description = "Marko Muller";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      firefox
       git
       neovim
     ];
   };
 
   # Enable automatic login for the user.
-  # services.getty.autologinUser = "mx2uller";
+  #services.getty.autologinUser = "mx2uller";
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

@@ -12,8 +12,6 @@
     };
   };
   # Workaround for gnome autologin
-  systemd.services = {
-    "getty@tty1".enable = false;
-    "autovt@tt1".enable = false;
-  };
+  systemd.services."getty@tty1".enable = false;  
+  systemd.services."autovt@tty1".enable = false;
 }
